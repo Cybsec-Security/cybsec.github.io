@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cybsec | Security Research & Responsible Disclosure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cybsec - Investigación en ciberseguridad, divulgación responsable y análisis técnico.">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', monospace;
+    background: radial-gradient(circle at top, #0a0f1f, #02040a);
+    color: #e6e6e6;
+}
+
+header {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #00e5ff;
+    letter-spacing: 2px;
+}
+
+header p {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    color: #b0bec5;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.accordion {
+    background: #0d1326;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #1c2548;
+    overflow: hidden;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion label {
+    display: block;
+    padding: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, #0d47a1, #00acc1);
+    color: #fff;
+    font-weight: bold;
+}
+
+.accordion label:hover {
+    opacity: 0.9;
+}
+
+.accordion .content {
+    max-height: 0;
+    overflow: hidden;
+    background: #060a18;
+    transition: max-height 0.4s ease;
+    padding: 0 20px;
+}
+
+.accordion input:checked ~ .content {
+    max-height: 500px;
+    padding: 20px;
+}
+
+.content p, .content ul {
+    color: #cfd8dc;
+    font-size: 0.95rem;
+}
+
+.content ul {
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.85rem;
+    color: #607d8b;
+}
+
+a {
+    color: #00e5ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #00e5ff;
+    color: #000;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CYBSEC</h1>
+    <p>
+        Investigación en ciberseguridad · Divulgación responsable ·
+        Análisis técnico de aplicaciones web
+    </p>
+    <span class="badge">Responsible Disclosure</span>
+</header>
+
+<div class="container">
+
+    <!-- QUIÉN SOY -->
+    <div class="accordion">
+        <input type="checkbox" id="acc1">
+        <label for="acc1">🛡️ ¿Quién es Cybsec?</label>
+        <div class="content">
+            <p>
+                Cybsec es una identidad profesional enfocada en la
+                <strong>investigación de seguridad ofensiva</strong>,
+                análisis de aplicaciones web, APIs y plataformas e-commerce.
+            </p>
+            <p>
+                El objetivo es identificar vulnerabilidades reales,
+                documentarlas técnicamente y reportarlas de forma
+                ética y responsable.
+            </p>
+        </div>
+    </div>
+
+    <!-- QUÉ HAGO -->
+    <div class="accordion">
+        <input type="checkbox" id="acc2">
+        <label for="acc2">🔍 ¿Qué tipo de investigaciones realizo?</label>
+        <div class="content">
+            <ul>
+                <li>Auditoría de WordPress / WooCommerce</li>
+                <li>Revisión de APIs REST y endpoints AJAX</li>
+                <li>Análisis de control de acceso y roles</li>
+                <li>Evaluación de lógica de negocio</li>
+                <li>Pruebas sobre nonces, sesiones y tokens</li>
+                <li>Revisión de plugins y componentes de terceros</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- METODOLOGÍA -->
+    <div class="accordion">
+        <input type="checkbox" id="acc3">
+        <label for="acc3">🧪 Metodología de trabajo</label>
+        <div class="content">
+            <ul>
+                <li>Reconocimiento pasivo y activo</li>
+                <li>Identificación de superficie de ataque</li>
+                <li>Pruebas manuales (sin automatización agresiva)</li>
+                <li>Validación de impacto real</li>
+                <li>Documentación paso a paso</li>
+                <li>Proof of Concept controlado</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- DIVULGACIÓN -->
+    <div class="accordion">
+        <input type="checkbox" id="acc4">
+        <label for="acc4">📢 Divulgación responsable</label>
+        <div class="content">
+            <p>
+                Todos los hallazgos se reportan de forma privada,
+                sin explotación destructiva, sin acceso a datos sensibles
+                y respetando los tiempos de respuesta de la organización.
+            </p>
+            <p>
+                No se publican vulnerabilidades sin autorización.
+            </p>
+        </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="accordion">
+        <input type="checkbox" id="acc5">
+        <label for="acc5">📬 Contacto de seguridad</label>
+        <div class="content">
+            <p>
+                Para temas de seguridad o divulgación responsable:
+            </p>
+            <ul>
+                <li>Email: <strong>security@cybsec.github.io</strong> (recomendado)</li>
+                <li>Security.txt: <a href="/.well-known/security.txt">/.well-known/security.txt</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 · Cybsec · Independent Security Research
+</footer>
+
+</body>
+</html>
